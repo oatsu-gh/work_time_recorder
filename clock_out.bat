@@ -33,4 +33,4 @@
     set japanese_weekday=“y
 )
 
-@echo %japanese_weekday% %formatted_date% %formatted_time% >> %~dp0%clock_out_log.txt
+@echo %japanese_weekday% %formatted_date% %formatted_time% >> %~dp0clock_out_log.txt
