@@ -2,9 +2,9 @@
 @set formatted_time=%time: =0%
 
 
-@rem "ã“ã“ã‹ã‚‰æ›œæ—¥è¨ˆç®—"
-@rem "å‚è€ƒ: http://tooljp.com/CommandBank/Windows/Date/Today_youbi-get.html"
-@rem "0:æ—¥, 1:æœˆ, 2:ç«, ... åœŸ: 6"
+@rem "‚±‚±‚©‚ç—j“úŒvŽZ"
+@rem "ŽQl: http://tooljp.com/CommandBank/Windows/Date/Today_youbi-get.html"
+@rem "0:“ú, 1:ŒŽ, 2:‰Î, ... “y: 6"
 
 @set /A year=%date:~0,4% * 1
 @set /A month=%date:~5,2% * 1
@@ -18,19 +18,19 @@
 @REM @echo %weekday%
 
 @if %weekday%==0 (
-    set japanese_weekday=æ—¥
+    set japanese_weekday=“ú
 ) else if %weekday%==1 (
-    set japanese_weekday=æœˆ
+    set japanese_weekday=ŒŽ
 ) else if %weekday%==2 (
-    set japanese_weekday=ç«
+    set japanese_weekday=‰Î
 ) else if %weekday%==3 (
-    set japanese_weekday=æ°´
+    set japanese_weekday=…
 ) else if %weekday%==4 (
-    set japanese_weekday=æœ¨
+    set japanese_weekday=–Ø
 ) else if %weekday%==5 (
-    set japanese_weekday=é‡‘
+    set japanese_weekday=‹à
 ) else if %weekday%==6 (
-    set japanese_weekday=åœŸ
+    set japanese_weekday=“y
 )
 
 @echo %japanese_weekday% %formatted_date% %formatted_time% >> %~dp0clock_in_log.txt
