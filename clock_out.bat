@@ -15,7 +15,7 @@
     set /A month=%month% + 12
 )
 @set /A weekday=(%year% + %year% / 4 - %year% / 100 + %year% / 400 + (13 * %month% + 8) / 5 + %day%) %% 7
-@REM @echo %weekday%
+@rem @echo %weekday%
 
 @if %weekday%==0 (
     set japanese_weekday=“ú
@@ -33,4 +33,6 @@
     set japanese_weekday=“y
 )
 
+@rem UTF-8‚Åo—Í
+@chcp 65001
 @echo %japanese_weekday% %formatted_date% %formatted_time% >> %~dp0clock_out_log.txt

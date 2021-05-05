@@ -33,4 +33,6 @@
     set japanese_weekday=“y
 )
 
+@rem UTF-8‚Åo—Í
+@chcp 65001
 @echo %japanese_weekday% %formatted_date% %formatted_time% >> %~dp0clock_in_log.txt
