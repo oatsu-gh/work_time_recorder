@@ -36,3 +36,6 @@
 @REM UTF-8で出力
 @chcp 65001
 @echo %japanese_weekday% %formatted_date% %formatted_time%>>%~dp0clock_out_log.txt
+
+@REM シャットダウン
+@shutdown /s

@@ -2,13 +2,13 @@
 @set formatted_time=%time: =0%
 
 
-@rem "‚±‚±‚©‚ç—j“úŒvŽZ"
-@rem "ŽQl: http://tooljp.com/CommandBank/Windows/Date/Today_youbi-get.html"
-@rem "0:“ú, 1:ŒŽ, 2:‰Î, ... “y: 6"
+@REM "‚±‚±‚©‚ç—j“úŒvŽZ"
+@REM "ŽQl: http://tooljp.com/CommandBank/Windows/Date/Today_youbi-get.html"
+@REM "0:“ú, 1:ŒŽ, 2:‰Î, ... “y: 6"
 
-@set /A year=%date:~0,4% * 1
-@set /A month=%date:~5,2% * 1
-@set /A day=%date:~8,2% * 1
+@set /A year=%date:~0,4%
+@set /A month=1%date:~5,2%-100
+@set /A day=1%date:~8,2%-100
 
 @if %month LEQ 2 (
     set /A year=%year% - 1
@@ -33,6 +33,6 @@
     set japanese_weekday=“y
 )
 
-@rem UTF-8‚Åo—Í
+@REM UTF-8‚Åo—Í
 @chcp 65001
-@echo %japanese_weekday% %formatted_date% %formatted_time% >> %~dp0clock_in_log.txt
+@echo %japanese_weekday% %formatted_date% %formatted_time%>>%~dp0clock_in_log.txt
